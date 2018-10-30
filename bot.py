@@ -7,7 +7,7 @@ import io
 import time
 
 
-listaVendedores = ['Vendedores']
+listaVendedores = []
 listaPrecos = []
 
 with io.open("precos" + '.csv', 'a', newline='', encoding='utf-8') as f:
@@ -49,10 +49,15 @@ for codigoProduto in codigosProduto:
 	#Cria o CSV com os vetores de vendedores e preços
 	with io.open("precos" + '.csv', 'a', newline='', encoding='utf-8') as f:
 		writer = csv.writer(f)
-		for i in range(1,len(vendedores)):
-			writer.writerow([codigoProduto, listaVendedores[i], listaPrecos[i]])
+		for i in range(0,len(vendedores)):
+			writer.writerow([codigoProduto, listaVendedores[i], listaPrecos[i+1]])
+
+	listaVendedores = []
+	listaPrecos = []
 
 	print("Arquivo precos.csv atualizado na pasta")
+	
+
 
 #Fecha o browser
 browser.close()
