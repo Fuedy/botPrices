@@ -66,8 +66,7 @@ for codigoProduto in codigosProduto:
 
 		with open('prices.csv', 'a', newline='', encoding='utf-8') as csvfile:
 			writer = csv.writer(csvfile)
-			for i in range(0,len(vendedores)):
-				writer.writerow(['Erro ao buscar o produto'])
+			writer.writerow([codigoProduto, 'Erro ao buscar o produto'])
 			csvfile.close()
 
 
