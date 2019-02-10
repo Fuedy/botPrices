@@ -68,7 +68,9 @@ for codigoProduto in codigosProduto:
 			writer = csv.writer(csvfile)
 			writer.writerow([codigoProduto, 'Erro ao buscar o produto'])
 			csvfile.close()
+		print("Arquivo precos.csv atualizado na pasta")
 
 
 #Fecha o browser
 browser.close()
+print("Todos os precos foram atualizados")

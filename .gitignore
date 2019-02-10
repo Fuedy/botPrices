@@ -1,0 +1,7 @@
+*.exe
+*.spec
+*.txt
+*.csv
+/build
+/dist
+/__*
